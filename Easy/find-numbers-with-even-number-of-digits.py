@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
+
 """
 Given an array nums of integers, return how many of them contain an even number of digits.
- 
 Example 1:
 Input: nums = [12,345,2,6,7896]
 Output: 2
@@ -17,6 +18,7 @@ Output: 1
 Explanation:
 Only 1771 contains an even number of digits.
 """
+
 
 class Solution(object):
     def findNumbers(self, nums):

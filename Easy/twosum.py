@@ -34,11 +34,10 @@ class Solution(object):
                 print("found")
                 indices = map[nums[i]],i
         print(map)
-
         return indices
 
 
 if __name__ == '__main__':
-    nums = [8,2,3,4]
+    nums = [3,2,4]
     testObj = Solution()
     print(testObj.twoSum(nums, 5))

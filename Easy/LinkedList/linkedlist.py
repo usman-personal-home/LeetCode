@@ -1,4 +1,4 @@
-from node import Node
+from Node import Node
 
 
 class UnorderedList(object):
@@ -127,7 +127,7 @@ class OrderedList(object):
         stop = False
 
         while cur is not None and not stop:
-            if cur.getData() > val:
+            if cur.getval() > val:
                 stop = True
             else:
                 previous = cur
@@ -199,9 +199,9 @@ class OrderedList(object):
         while cur is not None and not found and not stop:
             counter += 1
 
-            if cur.getData() == val:
+            if cur.getval() == val:
                 found = True
-            elif cur.getData() > val:
+            elif cur.getval() > val:
                 print("in here")
                 stop = True
             else:
@@ -213,14 +213,14 @@ class OrderedList(object):
     def lprint(self):
         cur = self.head
         while cur is not None:
-            print(cur.getData())
+            print(cur.getval())
             cur = cur.getNext()
 
     def toArray(self):
         lst = []
         cur = self.head
         while cur is not None:
-            lst.append(cur.getData())
+            lst.append(cur.getval())
             cur = cur.getNext()
         return lst
 

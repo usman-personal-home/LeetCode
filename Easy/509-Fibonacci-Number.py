@@ -14,4 +14,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     testObj = Solution()
-    print(testObj.fib(4))
+    print(testObj.fib(5))

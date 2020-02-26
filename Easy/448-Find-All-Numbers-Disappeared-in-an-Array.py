@@ -9,7 +9,7 @@ class Solution(object):
             temp = abs(nums[i]) - 1
             if nums[temp] > 0:
                 nums[temp] *= -1
-
+        print nums
         res = []
         for i, n in enumerate(nums):
             if n > 0:

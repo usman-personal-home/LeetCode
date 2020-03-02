@@ -36,8 +36,7 @@ def maxsubarraysumK(lst):
     max_so_far = 0
 
     for i in range(len(lst)):
-        current_
-        max += lst[i]
+        current_max += lst[i]
 
         if current_max > max_so_far:
             max_so_far = current_max

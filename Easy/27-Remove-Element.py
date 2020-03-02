@@ -7,11 +7,12 @@ class Solution(object):
         """
         i = 0
         for j in range(0, len(nums)):
-
+            print (i, j)
             if nums[j] != val:
                 nums[i] = nums[j]
                 i += 1
-            print (i,j)
+            print nums
+
         return i
 
 

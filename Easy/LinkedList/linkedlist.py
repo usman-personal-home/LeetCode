@@ -72,8 +72,10 @@ class UnorderedList(object):
 
     def lprint(self):
         cur = self.head
+
         while cur is not None:
-            print(cur.getData())
+            #print(type(cur))
+            print(cur.getVal())
             cur = cur.getNext()
 
     def toArray(self):
@@ -127,7 +129,7 @@ class OrderedList(object):
         stop = False
 
         while cur is not None and not stop:
-            if cur.getval() > val:
+            if cur.getVal() > val:
                 stop = True
             else:
                 previous = cur

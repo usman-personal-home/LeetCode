@@ -1,50 +1,48 @@
+
+
+from linkedlist import UnorderedList
+from Node import Node
+
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
 
-from linkedlist import OrderedList
 class Solution(object):
-    def reverseList(self, head):
+    def removeElements(self, head, val):
         """
         :type head: ListNode
+        :type val: int
         :rtype: ListNode
         """
-        cur = head
-        prev = None
 
-
-
+        sentinel = Node(0)
+        sentinel.next = head
+        prev, cur = sentinel, head
 
         while cur is not None:
-            # Save a copy of next
-            next = cur.next
-
-            # set previous to the next 0f current
-            cur.next = prev
-
-            # increment previous for next time
-            prev = cur
-
-            # increment cur
-            cur = next
-
-        head = prev
-
-        return head
+            if cur.val == val:
+                prev.next = cur.next
+            else:
+                prev = cur
+            cur = cur.next
+        # The sentinel is a dummy node, sentinel.head will actually return the
+        return sentinel.next
 
 
 if __name__ == '__main__':
-    lo = OrderedList()
-    lo.add(1)
-    lo.add(2)
+    lo = UnorderedList()
+
+    lo.add(6)
     lo.add(3)
     lo.add(4)
     lo.add(5)
     lo.add(6)
-    lo.add(7)
-    lo.add(8)
+    lo.add(2)
+    lo.add(6)
+    lo.add(6)
+    lo.add(6)
     print("***********************")
     #lo.lprint()
     print("***********************")
@@ -55,9 +53,9 @@ if __name__ == '__main__':
     lo.lprint()
     print(lo.toArray())
     print("***********************")
-
+    to_remove = 6
     testObj = Solution()
-    cur = testObj.reverseList(lo.head)
+    cur = testObj.removeElements(lo.head, to_remove)
     while cur is not None:
         print(cur.getVal())
         cur = cur.getNext()

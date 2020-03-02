@@ -20,6 +20,6 @@ class Solution(object):
 
 if __name__ == '__main__':
 
-    A = "leetcodel"
+    A = "leetcode"
     testObj = Solution()
     print(testObj.firstUniqChar(A))

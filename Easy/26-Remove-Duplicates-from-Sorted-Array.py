@@ -6,16 +6,12 @@ class Solution(object):
         """
         i = 0
         for j in range(1,len(nums)):
-
+            # When find a difference increment the bucket i and replace with nums[j]
             if nums[i] != nums[j]:
                 i += 1
                 nums[i] = nums[j]
-            print(nums)
-            print i
-            print(j)
-            print("%%%%%%")
-        return i + 1
 
+        return i + 1
 
 
 if __name__ == '__main__':

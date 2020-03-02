@@ -4,7 +4,7 @@ class Node(object):
         self.val = val
         self.next = None
 
-    def getval(self):
+    def getVal(self):
         return self.val
 
     def getNext(self):

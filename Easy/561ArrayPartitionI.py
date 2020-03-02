@@ -15,7 +15,7 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    A = [1,4,6,7]
+    A = [1,4,6,7,8,9]
 
     testObj = Solution()
     print(testObj.arrayPairSum(A))

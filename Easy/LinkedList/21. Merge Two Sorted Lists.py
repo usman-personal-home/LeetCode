@@ -5,6 +5,10 @@
 #         self.next = None
 
 from linkedlist import OrderedList
+from linkedlist import UnorderedList
+
+from Node import Node
+
 class Solution(object):
     def merge2sortedlists(self, li, lj):
         """
@@ -12,7 +16,28 @@ class Solution(object):
         :rtype: ListNode
         """
 
+        prehead = Node(-1)
+        prev = prehead
 
+        while li is not None and lj is not None:
+
+            # add the elements as per the values from l1 and l2
+            if li.val <= lj.val:
+                prev.next = li
+                li = li.next
+            else:
+                prev.next = lj
+                lj = lj.next
+
+            # Increment previous to keep 1 step behind the current list
+            prev = prev.next
+
+        # append the non-empty list to prev
+        print(type(li))
+        print(type(lj))
+        prev.next = li if li is not None else lj
+
+        return prehead.next
 
 
 
@@ -30,14 +55,17 @@ if __name__ == '__main__':
     print("***********************")
     #lo.lprint()
     print("***********************")
-    print(lo.search(40))
+    #print(lo.search(40))
     print("***********************")
     #print(lo.search(8))
     #print(lo.size())
-    lo.lprint()
-    print(lo.toArray())
+    #lo.lprint()
+    #print(lo.toArray())
     print("***********************")
 
     testObj = Solution()
-    li = testObj.merge2sortedlists(lo, l1)
+    cur = testObj.merge2sortedlists(lo.head, l1.head)
+    li = UnorderedList()
+
+    li.head = cur
     li.lprint()

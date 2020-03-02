@@ -14,7 +14,7 @@ class Solution(object):
         c = collections.Counter(arr)
         print c
         print(len(c))
-
+        print(c.values())
         print(len(set(c.values())))
         # Compare the keys of the dictionary, with set(unique) values
         return len(c) == len(set(c.values()))

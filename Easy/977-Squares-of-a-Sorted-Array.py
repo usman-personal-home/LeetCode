@@ -8,8 +8,10 @@ class Solution(object):
         l,r = 0, len(A) - 1
         res = []
         while l <= r:
-            print l
-            print r
+            #print l
+            #print r
+            print(abs(A[l]))
+            print(abs(A[r]))
             print("####")
             if abs(A[l]) > abs(A[r]):
                 res.append(A[l] ** 2)
@@ -18,7 +20,7 @@ class Solution(object):
                 res.append(A[r] ** 2)
                 r -= 1
 
-        return res
+        return res[::-1]
 """    left = 0
     right = len(a)-1
     res = []

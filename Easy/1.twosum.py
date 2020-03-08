@@ -1,4 +1,5 @@
 class Solution(object):
+
     def twoSumSorted(self, nums, target):
         """
         :type nums: List[int]

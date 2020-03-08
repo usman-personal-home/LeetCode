@@ -25,17 +25,22 @@ class Solution(object):
             if count <= 2:
                 print("Index i " + str(i) + " Index j " + str(j))
                 print("Copying " + str(nums[i]) + " to " + str(nums[j]))
-                print nums
                 print("######")
+                print nums
                 nums[j] = nums[i]
+                print nums
+                print
+                print("######")
                 j += 1
 
         print nums
         return j
 
+    def removeD(self, nums):
 
+        return j
 
 if __name__ == '__main__':
-    nums = [1,1,1,2,2,3]
+    nums = [1,1,1,2,3]
     testObj = Solution()
     print(testObj.removeDuplicates(nums))

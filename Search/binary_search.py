@@ -6,7 +6,7 @@ import random
 
 def main():
     mylist = [1, 11, 3, 5, 4, 6, 7, 10, 9, 8, 12, 13, ]
-    new_list = new_bin_search(sorted(mylist), 12)
+    new_list = new_bin_search(sorted(mylist), 15)
     print(new_list)
     #list1 = binarySearchIterative(sorted(mylist), 13)
     #print(sorted(mylist))
@@ -64,15 +64,15 @@ def new_bin_search(lst, target):
     if len(lst) == 0:
         return False
     else:
-        mid = len(lst)/2
-        if lst[mid] == target:
+        mid = len(lst) // 2
+        if target == lst[mid]:
             return True
-
         else:
-            if lst[mid] > target:
+            if target < lst[mid]:
                 return new_bin_search(lst[:mid], target)
-            else:
-                return new_bin_search(lst[mid + 1:], target)
+            elif target > lst[mid]:
+                return new_bin_search(lst[mid+1:], target)
+
 
 
     """

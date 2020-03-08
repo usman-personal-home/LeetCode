@@ -26,19 +26,21 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        print nums
         indices = []
-        map = {}
+        dict = {}
         for i in range(len(nums)):
-            if nums[i] not in map:
-                map[target - nums[i]] = i
+            if nums[i] not in dict:
+                dict[target - nums[i]] = i
             else:
                 print("found")
-                indices = map[nums[i]],i
-        print(map)
+                indices.append((dict[nums[i]],i))
+            print indices
+            print(dict)
         return indices
 
 
 if __name__ == '__main__':
-    nums = [3,2,4]
+    nums = [2, 7, 11, 15]
     testObj = Solution()
-    print(testObj.twoSum(nums, 5))
+    print(testObj.twoSum(nums, 9))

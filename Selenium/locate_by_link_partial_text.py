@@ -10,7 +10,7 @@ inputElement = driver.find_element_by_name("q")
 inputElement.send_keys("Techbeamers")
 inputElement.submit()
 time.sleep(5)
-elem = driver.find_element_by_link_text("Python Tutorial")
+elem = driver.find_element_by_partial_link_text("Python")
 elem.click()
 time.sleep(20)
 

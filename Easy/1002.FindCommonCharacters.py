@@ -5,20 +5,23 @@ class Solution(object):
         :type A: List[str]
         :rtype: List[str]
         """
-        ans = []
-        d1 = Counter(A[0])
-        print d1
-        for i in range(1, len(A)):
-            d2 = Counter(A[i])
-            d1 = d1 & d2
-            print d2
-            print d1
-        ans = list(d1.elements())
+        # Get the first word in a dict
+        d = {i: A[0].count(i) for i in A[0]}
+        print d
+        for i in A[1:]:
+            for j in d.keys():
+                if i.count(j) < d[j]:
+                    d[j] = i.count(j)
+        print d
+        n = ''
+        for i in d.keys():
+            n += i * d[i]
+        print n
+        return [i for i in n]
 
-        return ans
 
 if __name__ == '__main__':
 
-    words = ["bella","lpppbelj","roller"]
+    words = ["bella","lpppbelj","ac"]
     testObj = Solution()
     print(testObj.commonChars(words))

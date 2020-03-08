@@ -11,25 +11,26 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        cur = head
         prev = None
+        cur = head
 
-
-
+        # a->b->c
+        # c->b->a
 
         while cur is not None:
-            # Save a copy of next
-            next = cur.next
+            # get a copy of next to set the current value at the end
+            next = cur.getNext()
 
-            # set previous to the next 0f current
-            cur.next = prev
+            # set the cur to the previous
+            cur.setNext(prev)
 
-            # increment previous for next time
+            # move previous forward by 1 for next time
             prev = cur
 
-            # increment cur
+            # move cur by 1
             cur = next
 
+        # set the head of the list
         head = prev
 
         return head

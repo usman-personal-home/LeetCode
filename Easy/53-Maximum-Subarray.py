@@ -14,19 +14,16 @@ def main():
 
 
 def maxsubarraysum(nums):
-    n = len(nums)
-    curr_sum = max_sum = nums[0]
-    for i in range(1, n):
-        if curr_sum + nums[i] > nums[i]:
-            curr_sum += nums[i]
-        else:
-            curr_sum = nums[i]
-        #curr_sum = max(nums[i], curr_sum + nums[i])
 
-        max_sum = max(max_sum, curr_sum)
-        # print curr_sum
-        # print max_sum
-        # print("######")
+    max_sum = cur_sum = nums[0]
+
+    for i in range(1,len(nums)):
+        if cur_sum + nums[i] > nums[i]:
+            cur_sum += nums[i]
+        else:
+            cur_sum = nums[i]
+
+        max_sum = max(cur_sum,max_sum)
 
     return max_sum
 ## Kadane's algorithm- Dynamic Programming

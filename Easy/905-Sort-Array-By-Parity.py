@@ -6,6 +6,7 @@ class Solution(object):
         """
         :type A: List[int]
         :rtype: List[int]
+        All even numbers followed
         """
         i = 0
         j = len(A) - 1
@@ -16,9 +17,8 @@ class Solution(object):
                 j -= 1
             elif A[i] % 2 == 0:
                 i += 1
-            else:
+            elif A[j] % 2 != 0:
                 j -= 1
-
         return A
 
 if __name__ == '__main__':

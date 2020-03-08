@@ -25,7 +25,7 @@ class UnorderedList(object):
         previous = None
 
         while not found:
-            if cur.getData() == val:
+            if cur.getVal() == val:
                 found = True
             else:
                 previous = cur
@@ -54,7 +54,7 @@ class UnorderedList(object):
 
         cur = self.head
         while cur is not None and not found:
-            if cur.getData() == val:
+            if cur.getVal() == val:
                 found = True
             else:
                 cur = cur.getNext()
@@ -82,7 +82,7 @@ class UnorderedList(object):
         lst = []
         cur = self.head
         while cur is not None:
-            lst.append(cur.getData())
+            lst.append(cur.getVal())
             cur = cur.getNext()
         return lst
 
@@ -170,7 +170,7 @@ class OrderedList(object):
         previous = None
 
         while not found:
-            if cur.getData() == val:
+            if cur.getVal() == val:
                 found = True
             else:
                 previous = cur
@@ -201,9 +201,9 @@ class OrderedList(object):
         while cur is not None and not found and not stop:
             counter += 1
 
-            if cur.getval() == val:
+            if cur.getVal() == val:
                 found = True
-            elif cur.getval() > val:
+            elif cur.getVal() > val:
                 print("in here")
                 stop = True
             else:
@@ -215,14 +215,14 @@ class OrderedList(object):
     def lprint(self):
         cur = self.head
         while cur is not None:
-            print(cur.getval())
+            print(cur.getVal())
             cur = cur.getNext()
 
     def toArray(self):
         lst = []
         cur = self.head
         while cur is not None:
-            lst.append(cur.getval())
+            lst.append(cur.getVal())
             cur = cur.getNext()
         return lst
 

@@ -8,7 +8,7 @@ class Solution(object):
 
         for price in prices:
 
-            cost = min(price, cost) # set the lowest possible cost
+            cost = min(price, cost)  # set the lowest possible cost
             print(cost, price)
             cur_profit = price - cost
             profit = max(profit, cur_profit)

@@ -9,7 +9,7 @@ class Solution(object):
         #return sorted(s) == sorted(t)
         c1 = Counter(s)
         c2 = Counter(t)
-        print len(c1 - c2)
+        print len(c2 - c1)
 
         if cmp(c1, c2) == 0:
             return True
@@ -20,6 +20,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = "anagram"
-    t = "nagaram"
+    t = "nagarams"
     testObj = Solution()
     print(testObj.isAnagram(s,t))

@@ -26,6 +26,6 @@ class Solution(object):
 
 if __name__ == '__main__':
 
-    A = "abc"
+    A = "maham"
     testObj = Solution()
     print(testObj.canPermutePalindrome(A))

@@ -25,7 +25,6 @@ class Solution(object):
             print i
             print j
             print a
-
         return a
 
 

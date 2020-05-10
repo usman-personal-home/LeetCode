@@ -23,6 +23,8 @@ class Solution(object):
         return current
 
 if __name__ == '__main__':
-    address = ["a","a","b","b","c","c","c"]
+
+    str1 = "ABABAB"
+    str2 = "ABAB"
     testObj = Solution()
-    print(testObj.compress(address))
+    print(testObj.gcdOfStrings(str1, str2))

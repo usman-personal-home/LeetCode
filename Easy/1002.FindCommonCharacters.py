@@ -5,6 +5,7 @@ class Solution(object):
         :type A: List[str]
         :rtype: List[str]
         """
+
         # Get the first word in a dict
         d = {i: A[0].count(i) for i in A[0]}
         print d
@@ -22,6 +23,6 @@ class Solution(object):
 
 if __name__ == '__main__':
 
-    words = ["bella","lpppbelj","ac"]
+    words = ["bella","label", "hello"]
     testObj = Solution()
     print(testObj.commonChars(words))

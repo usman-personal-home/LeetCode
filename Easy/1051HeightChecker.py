@@ -11,8 +11,8 @@ class Solution(object):
             if heights[i] != res[i]:
                 counter += 1
 
-
         return counter
+
 
 if __name__ == '__main__':
     heights = [1,1,4,2,1,3]

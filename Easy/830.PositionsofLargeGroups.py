@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type S: str
         :rtype: List[List[int]]
-        """
+
         count = 1
         res = []
         start = 0
@@ -22,6 +22,23 @@ class Solution(object):
         # This is for the case where all chars are the same 'aaa' or the same numbers are at the end of the array
         if count >= 3:
             res.append([start, len(S) - 1])
+        """
+        res = []
+        count = 1
+        start = 0
+        for i in range(1,len(S)):
+            if S[i] == S[i-1]:
+                count += 1
+            else:
+                # the char has changed
+                if count >= 3:
+                    res.append([start, i - 1])
+                count = 1
+                start = i
+
+        if count >= 3:
+            res.append([start, len(S) - 1])
+
         return res
 
 
@@ -58,7 +75,7 @@ class Solution(object):
         return ans
 
 if __name__ == '__main__':
-    chars = "abbbbccccc"
+    chars = "abbbbccccceee"
     testObj = Solution()
-    print(testObj.largeGroupPositions3(chars))
+    print(testObj.largeGroupPositions(chars))
 

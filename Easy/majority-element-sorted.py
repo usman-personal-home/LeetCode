@@ -28,3 +28,4 @@ if __name__ == '__main__':
     print nums
     testObj = Solution()
     print(testObj.majorityElementSorted(nums))
+    hello()

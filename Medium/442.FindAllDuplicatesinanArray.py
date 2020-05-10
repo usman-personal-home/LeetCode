@@ -8,8 +8,9 @@ class Solution(object):
 
         res = []
         for i in range(len(nums)):
+            # set temp -> abs num - 1
             temp = abs(nums[i]) - 1
-            # check if the number is negative at the temp i ndex, meaning it has been encountered before
+            # check if the number is negative at the temp index, meaning it has been encountered before
             # hence a duplicate
             if nums[temp] < 0:
                 res.append(temp + 1)
